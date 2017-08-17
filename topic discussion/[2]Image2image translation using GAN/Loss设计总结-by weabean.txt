@@ -1,0 +1,11 @@
+Loss设计
+
+对抗loss要求输出图片在小尺度信息上像目标图片集合中的真实图片，重构loss要求输出图片尽量保留原图的大尺度信息，包括identity和structure等
+
+重构loss有L1、L2，前者容易学到锐利清晰的图像，后者容易学到模糊的图片
+
+一般gan的loss比较“贪婪”，想要“比真实样本还真”；MMD的loss比较“保守”，仅仅要求“和真实样本一样”；最小二乘的loss更加“保守”，仅仅要求走到介于真实样本和生成样本的中间地带（判别器二分类决策面附近）
+
+MMD思想的比喻：G为了打败D，需要“揣摩”D的“心思”，然后生成更符合D的“心思”的图像
+
+具有MMD思想的一些东西：neural style中由的gram matrix计算出来的perceptual loss （本质是二阶多项式核的MMD），improved gan的feature matching，wasserstein gan（最后的输出某种意义上可以看做mmd变换的均值， 只不过这个变换是学出来的不透明的）

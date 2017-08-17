@@ -1,0 +1,14 @@
+
+InfoGAN:
+1. InfoGAN能干什么？它与GAN有什么区别？
+2. InfoGAN通过什么方法实现可解释性表示？
+3. 对于离散编码和连续编码，分别可以采用什么后验概率分布假设？它们对应的变分下界是什么？
+4. 它和PCA有什么联系？MNIST的PCA可视化结果可以参考http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+5. 你还知道哪些可以做可解释性表示学习(Interpretable Representation Learning)的方法？
+
+f-GAN:
+1. 什么是f-divergence？常见的f-散度有哪些？
+2. 如果优化目标是Pearson卡方散度，得到的GAN的目标函数是怎样的？这就是LSGAN(Least Square GAN)。
+3. (给有兴趣了解f-GAN背后数学原理的同学)凸共轭(convex conjugate)是什么？怎么根据散度推导对应的GAN的目标函数？
+
+

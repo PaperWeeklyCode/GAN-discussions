@@ -1,0 +1,70 @@
+###GAN目前在NLP中都尝试了哪些任务，主要思路和效果是怎样的？
+
+对话系统，纯文本生成（如诗歌生成），机器翻译，IR，中文分词，文本分类（半监督学习）等等，补充一下，“图说”和“说图”等这类的应用也算。
+
+主要思路是用D来判别真假，用RL的policy gradient的方式来打分和更新。
+
+原有任务上做RL效果不一定会比GAN的方法好，而且在原有问题上也需要定义科学的reward才行。
+
+目前的做法不是直接给噪声让它生成，而是在原有任务上改进，就像IRGAN。
+
+
+###GAN在离散数据上有哪些做法？存在哪些问题？
+
+离散数据上没办法直接反向传播，一般采用RL中的policy gradient或者gumbel softmax（可以直接求梯度）来近似计算，但是policy gradient的variance比较大，需要特别注意学习率的调整；gumbel softmax目前的效果还不是很好。
+
+此外，还可以用seq2seq的方法，参考SeqGAN。
+
+存在问题：
+
+(1). 离散数据和连续的embedding空间之间存在矛盾，embedding上的一点微小改变，很难直接反映到离散数据上。这一点可以参考Ian Goodfellow的观点：
+
+You can make slight changes to the synthetic data only if it is based on continuous numbers. If it is based on discrete numbers, there is no way to make a slight change.
+
+For example, if you output an image with a pixel value of 1.0, you can change that pixel value to 1.0001 on the next step.
+
+If you output the word "penguin", you can't change that to "penguin + .001" on the next step, because there is no such word as "penguin + .001". You have to go all the way from "penguin" to "ostrich".
+
+Since all NLP is based on discrete values like words, characters, or bytes, no one really knows how to apply GANs to NLP yet.
+
+摘自：https://www.reddit.com/r/MachineLearning/comments/40ldq6/generative_adversarial_networks_for_text/
+
+(2). 可解释性差，这一点来源于GAN本身的可解释性差，GAN就像一个黑盒子。
+
+(3). 一般来说没办法直接求得梯度，需要借助policy gradient或者gumbel softmax，但是它们也只是一种近似，存在bias或者variance较大的问题。
+
+(4). RNN/LSTM在NLP中很常用，但是跟GAN结合，需要添加很多tricks才能work。
+
+
+###GAN for NLP的玄学讨论
+
+(1). G和D的设计，D用CNN比较多，G用seq2seq的设计比较多，RNN/LSTM用的比较多。
+
+(2). 学习率的控制问题，如果采用policy gradient，由于它的variance比较大，学习率不能太大，两者的学习率也要均衡，对实验效果的影响比较显著。（可以参考Adversarial Neural Machine Translation的讨论）
+
+(3). 如果有监督信息，尽量用上监督信息，以机器翻译为例，用上bilingual supervised training能使训练更稳定。
+
+(4). 下面这个trick来自于reddit的用户LeavesBreathe(传送门：https://www.reddit.com/r/MachineLearning/comments/40ldq6/generative_adversarial_networks_for_text)：
+
+I have had a very hard time getting them to work with RNNs. Talk about a learning rate adjustment nightmare.
+
+One thing curiously that has helped me is training the Discriminator on discriminating between pre-trained generator network outputs.
+
+a). Train a generator (G0) as normal using max-likelihood.
+
+b). Train your discriminator to discriminate between inputs of this generator (G0) and real data.
+
+c). Start with a fresh generator (G1) and use the GAN architecture to train it using the same discriminator.
+
+My theory as to why this works better is that the discriminator already has some experience with how language works. When I child learns how to talk, they listen to words first, and learns to discriminate word order first. After having enough training data, a child then learns to generate words.
+
+
+###GAN比较有可能解决NLP领域的哪些问题？
+
+离散序列数据的生成目前还存在比较大的问题，生成的数据意义不大。
+
+(1). 半监督学习是比较容易做好的一个方向，如分类问题。
+
+(2). 机器翻译也能work，近期有一些文章得到了较好的结果。
+
+(3). 检索系统，如IRGAN，可以做检索式问答、推荐等。
