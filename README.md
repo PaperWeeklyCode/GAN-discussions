@@ -1,5 +1,5 @@
 # GAN-discussions
-这里是GAN讨论群讨论汇总的地方。
+这里是GAN讨论群讨论汇总，以及存放大家的**GAN** paper notes的地方。
 
 目前的讨论包含两种类型：专题讨论和论文讨论。专题讨论会有一个主题，讨论的论文围绕某个GAN主题展开；论文讨论可以没有主题，讨论与GAN相关论文。
 
@@ -20,3 +20,8 @@
 * [GAN+DCGAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B1%5DGAN%2BDCGAN)
 * [CGAN+Improved GAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B2%5DCGAN%2BImproved%20GAN)
 * [InfoGAN+f-GAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B3%5DInfoGAN%2Bf-GAN)
+
+## 论文笔记
+这里存放大家的论文笔记。
+
+欢迎投稿！投稿请按照[这个格式](https://github.com/PaperWeeklyCode/GAN-discussions/blob/master/paper%20notes/README.md) push request。
