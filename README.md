@@ -24,4 +24,4 @@
 ## 论文笔记
 这里存放大家的论文笔记。
 
-欢迎投稿！投稿请按照[这个格式](https://github.com/PaperWeeklyCode/GAN-discussions/blob/master/paper%20notes/README.md) push request。
+欢迎投稿！投稿请按照[这个格式](https://github.com/PaperWeeklyCode/GAN-discussions/blob/master/paper%20notes/README.md) pull request。
