@@ -15,6 +15,7 @@
 * [Semi-supervised learning - part 1](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/topic%20discussion/%5B5%5DSemi-supervised%20learning%20-%20part%201)
 * [Semi-supervised learning - part 2](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/topic%20discussion/%5B6%5DSemi-supervised%20learning%20-%20part%202)
 * [Semi-supervised learning - part 3](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/topic%20discussion/%5B7%5DSemi-supervised%20learning%20-%20part%203)
+* [VAE](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/topic%20discussion/%5B8%5DVAE)
 
 ## 论文讨论
 * [GAN+DCGAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B1%5DGAN%2BDCGAN)
