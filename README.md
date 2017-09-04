@@ -22,8 +22,5 @@
 * [CGAN+Improved GAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B2%5DCGAN%2BImproved%20GAN)
 * [InfoGAN+f-GAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B3%5DInfoGAN%2Bf-GAN)
 * [AAE](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B4%5DAAE)
+* [BiGAN+iGAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B5%5DBiGAN%2BiGAN)
 
-## 论文笔记
-这里存放大家的论文笔记。
-
-欢迎投稿！投稿请按照[这个格式](https://github.com/PaperWeeklyCode/GAN-discussions/blob/master/paper%20notes/README.md) pull request。
