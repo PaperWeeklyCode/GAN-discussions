@@ -23,4 +23,5 @@
 * [InfoGAN+f-GAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B3%5DInfoGAN%2Bf-GAN)
 * [AAE](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B4%5DAAE)
 * [BiGAN+iGAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B5%5DBiGAN%2BiGAN)
-
+* [DistanceGAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B6%5DDistanceGAN)
+* [△-GAN](https://github.com/PaperWeeklyCode/GAN-discussions/tree/master/paper%20discussion/%5B7%5DTriangleGAN)
